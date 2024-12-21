@@ -26,6 +26,7 @@
         <h4 class="emoji-text">ฅ^•ﻌ•^ฅ</h4>
         <h4>这里将走上条成为小大夫的"当归路"</h4>
     </div>
+    
 </nav>
 
     <!-- 主内容区域 -->
@@ -239,6 +240,10 @@
     </main>
 
     <script>
+        document.querySelector('.toggle-btn').addEventListener('click', function() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('hidden');
+        });
         // 页面切换逻辑
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', function() {
@@ -384,10 +389,7 @@
             document.getElementById('playAgain').style.display = 'none';
             document.getElementById('userGuess').value = '';
         }
-        document.querySelector('.toggle-btn').addEventListener('click', function() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.classList.toggle('hidden');
-        });
+        
         document.querySelector('.guess-form')?.addEventListener('submit', function(e) {
             e.preventDefault();
             const guess = document.getElementById('userGuess').value.trim();
