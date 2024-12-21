@@ -32,15 +32,16 @@
             box-shadow: 2px 0 5px rgba(0,0,0,0.1);
             background: url('/nwpu-tcm-assistant/backend/img/bj3.png') no-repeat center center / cover;
             color: white;
-            transition: width 0.3s;
             z-index: 1000;
         }
         .sidebar-title {
-            display: flex;
-            align-items: center;
+            text-align: center;
             padding: 10px;
             background-color: var(--secondary-color);
+            border-radius: 8px;
+            margin-bottom: 20px;
             border: 1px solid #000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .sidebar-box {
