@@ -23,8 +23,8 @@
         }
         .sidebar {
             position: fixed;
-            left: 0;
             top: 0;
+            left: 0;
             width: 250px;
             height: 100vh;
             background-color: var(--primary-color);
@@ -32,19 +32,23 @@
             box-shadow: 2px 0 5px rgba(0,0,0,0.1);
             background: url('/nwpu-tcm-assistant/backend/img/bj3.png') no-repeat center center / cover;
             color: white;
+            transition: width 0.3s;
             z-index: 1000;
         }
-
         .sidebar-title {
-            text-align: center;
+            display: flex;
+            align-items: center;
             padding: 10px;
             background-color: var(--secondary-color);
-            border-radius: 8px;
-            margin-bottom: 20px;
             border: 1px solid #000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
+        .toggle-btn {
+            margin-left: auto;
+            font-size: 1.5em;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
         .sidebar-box {
             text-align: center;
             padding: 10px;
@@ -54,9 +58,11 @@
             border: 1px solid #000;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
         .sidebar-box h4 {
             margin: 5px 0;
+        }
+        .sidebar.hidden {
+            left: -250px; /* 侧边栏折叠后的位置 */
         }
         .text-box{
             text-align: center;
