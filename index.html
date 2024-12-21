@@ -30,34 +30,9 @@
     <main class="main-content">
         <!-- 主页 -->
         <section id="home" class="page-section active">
-            <style>
-                #home {
-                    text-align: center;
-                    justify-content: center; /* 垂直居中 */
-                }
-                #home .card {
-                    background: #ebe4dc;
-                    border-radius: 8px;
-                    padding: 20px;
-                    margin-bottom: 20px;
-                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                }
-
-                #home .herb-image {
-                    width: 100%; /* 设置图片宽度为容器宽度的100% */
-                    height: auto; /* 高度自动调整以保持比例 */
-                    object-fit: cover; /* 图片覆盖整个容器，但保持比例 */
-                    border-radius: 4px;
-                }
-                #home .card:hover {
-                    transform: translateY(-5px); /* 向上移动5px */
-                    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 添加阴影效果 */
-                    transition: transform 0.3s, box-shadow 0.3s; /* 过渡效果的时间 */
-                }
-            </style>
                   <h1>欢迎来到欢乐小药堂</h1>
                 <p class="caption">🌿 你将从这里开始你的小小郎中之旅。</p>
-                <img src="/static/images/herbs/xiao.png" alt="Welcome Image" class="herb-image" style="width:50%; height: auto;">
+                <img src="/nwpu-tcm-assistant/backend/img/xiao.png" alt="Welcome Image" class="herb-image" style="width:50%; height: auto;">
             </div>
             </style>
                 <h2>中医药</h2>
@@ -68,51 +43,7 @@
 
         <!-- 学药材部分 -->
         <section id="learn" class="page-section">
-            <style>
-                #learn .herbs-section {
-                    padding: 20px;
-                    background: #ebe4dc;
-                    border-radius: 8px;
-                    margin: 20px 0;
-                }
-
-                #learn .herb-card {
-                    border: 1px solid #ebe4dc;
-                    border-radius: 8px;
-                    padding: 15px;
-                    margin: 10px 0;
-                    background: #ebe4dc;
-                }
-
-                #learn .herb-image {
-                    max-width: 100%;
-                    height: auto;
-                    border-radius: 4px;
-                    margin: 10px 0;
-                }
-
-                #learn .game-section {
-                    margin-top: 20px;
-                    padding: 20px;
-                    background: #ebe4dc;
-                    border-radius: 8px;
-                }
-
-                #learn .button {
-                    background-color: var(--primary-color);
-                    color: #ebe4dc;
-                    border: none;
-                    padding: 10px 20px;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    margin: 10px 0;
-                }
-
-                #learn .button:hover {
-                    background-color: var(--secondary-color);
-                }
-            </style>
-
+            
             <div class="herbs-section">
                 <h1>小郎中学药材: 熟悉药材</h1>
                 <p>熟悉药草是一个郎中的必修课，所以我们先见识一些常见的草药吧！😎</p>
@@ -233,62 +164,12 @@
 
         <!-- 拜师部分 -->
         <section id="master" class="page-section">
-            <style>
-                #master .master-section {
-                    padding: 20px;
-                    background:#ebe4dc ;
-                    border-radius: 8px;
-                    margin: 20px 0;
-                    max-width: 800px;
-                    margin: 0 auto;
-                }
-
-                #master .master-image {
-                    width: 200px;
-                    height: 200px;
-                    border-radius: 50%;
-                    margin: 20px auto;
-                    display: block;
-                    object-fit: cover;
-                }
-
-                #master .chat-container {
-                    border: 1px solid #ebe4dc;
-                    border-radius: 8px;
-                    padding: 20px;
-                    margin: 20px 0;
-                    background: #ebe4dc;
-                }
-
-                #master .chat-input {
-                    display: flex;
-                    gap: 10px;
-                    margin-top: 20px;
-                }
-
-                #master .message {
-                    margin: 10px 0;
-                    padding: 10px;
-                    border-radius: 8px;
-                    max-width: 80%;
-                }
-
-                #master .user-message {
-                    background-color: #ebe4dc;
-                    margin-left: auto;
-                }
-
-                #master .master-message {
-                    background-color: #ebe4dc;
-                    margin-right: auto;
-                }
-            </style>
 
             <div class="master-section">
                 <h1>小郎中拜师: 与师交流</h1>
                 <p>在这里我们将从师于李时珍喔，大朋友小朋友如果有什么疑惑敬请询问喔，李老先生将会给予你满意的答复喔！</p>
 
-                <img src="/static/images/herbs/li_shizhen.png" alt="李时珍像" class="master-image">
+                <img src="/nwpu-tcm-assistant/backend/img/li_shizhen.png" alt="李时珍像" class="master-image">
 
                 <div class="chat-container">
                     <div class="chat-messages" id="chatMessages">
@@ -312,40 +193,6 @@
 
         <!-- 练小手部分 -->
         <section id="practice" class="page-section">
-            <style>
-                #practice .practice-section {
-                    padding: 20px;
-                    background: #ebe4dc;
-                    border-radius: 8px;
-                    margin: 20px 0;
-                    max-width: 800px;
-                    margin: 0 auto;
-                }
-
-                #practice .recipe-card {
-                    border: 1px solid #ebe4dc;
-                    border-radius: 8px;
-                    padding: 20px;
-                    margin: 20px 0;
-                    background: #ebe4dc;
-                    transition: transform 0.2s;
-                }
-
-                #practice .recipe-card:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-                }
-
-                #practice .steps-list li::before {
-                    content: "👉";
-                    margin-right: 10px;
-                }
-
-                #practice .warning-list li::before {
-                    content: "⚠️";
-                    margin-right: 10px;
-                }
-            </style>
 
             <div class="practice-section">
                 <h1>小郎中练小手: 药食同源</h1>
@@ -413,7 +260,7 @@
         const herbData = {
             "人参": {
                 description: "人参，五加科植物，被誉为'百草之王'，具有大补元气、复脉固脱等功效。",
-                image: "/static/images/herbs/yc1.bmp"
+                image: "/static/images/herbs/人参.jpg"
             },
             "黄芪": {
                 description: "黄芪，豆科植物，有增强免疫力、利尿消肿等作用。",
@@ -695,7 +542,7 @@
         const recipeData = {
             "当归炖鸡": {
                 effect: "当归炖鸡具有补血调经的功效。",
-                image: "/static/images/herbs/ys1.png",
+                image: "/nwpu-tcm-assistant/backend/img/ys1.png",
                 steps: [
                     "将当归洗净备用",
                     "鸡切块，焯水去血沫",
@@ -704,7 +551,7 @@
             },
             "黄芪炖羊肉": {
                 effect: "黄芪炖羊肉具有温阳补气的功效。",
-                image: "/static/images/herbs/ys2.png",
+                image: "/nwpu-tcm-assistant/backend/img/ys2.png",
                 steps: [
                     "将黄芪洗净备用",
                     "羊肉切块，焯水去血沫",
@@ -713,7 +560,7 @@
             },
             "枸杞红枣茶": {
                 effect: "枸杞红枣茶具有滋补肝肾、益精明目的功效。",
-                image: "/static/images/herbs/ys3.png",
+                image: "/nwp-tcm-assistant/backend/img/ys3.png",
                 steps: [
                     "将枸杞和红枣洗净",
                     "加入适量水煮沸后小火煮10分钟",
@@ -722,7 +569,7 @@
             },
             "山药炒木耳": {
                 effect: "山药炒木耳具有健脾益肺、补肾涩精的功效。",
-                image: "/static/images/herbs/ys4.png",
+                image: "/nwpu-tcm-assistant/backend/img/ys4.png",
                 steps: [
                     "山药切片，木耳泡发",
                     "将山药和木耳一同炒至熟透",
