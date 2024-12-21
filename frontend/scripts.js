@@ -1,8 +1,5 @@
 
-document.querySelector('.toggle-btn').addEventListener('click', function() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('hidden');
-});
+
 // 页面切换逻辑
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', function() {
