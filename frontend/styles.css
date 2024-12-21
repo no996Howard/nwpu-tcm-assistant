@@ -61,9 +61,7 @@
         .sidebar-box h4 {
             margin: 5px 0;
         }
-        .sidebar.hidden {
-            left: -250px; /* 侧边栏折叠后的位置 */
-        }
+        
         .text-box{
             text-align: center;
             padding: 10px;
