@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小郎中培养日记</title>
+
+</head>
+<body>
+    <!-- 侧边栏导航 -->
+    <nav class="sidebar">
+        <div class="sidebar-title">
+            <h1>小小大夫</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a data-page="home" class="active">主页</a></li>
+            <li><a data-page="learn">小郎中学药材</a></li>
+            <li><a data-page="master">小郎中拜大师</a></li>
+            <li><a data-page="practice">小郎中练小手</a></li>
+            <li><a data-page="identify">小郎中认植物</a></li>
+        </ul>
+        <div class="text-box">
+            <h4 class="emoji-text">ฅ^•ﻌ•^ฅ</h4>
+            <h4>这里将走上条成为小大夫的"当归路"</h4>
+        </div>
+    </nav>
+
+    <!-- 主内容区域 -->
+    <main class="main-content">
+        <!-- 主页 -->
+        <section id="home" class="page-section active">
+            <style>
+                #home {
+                    text-align: center;
+                    justify-content: center; /* 垂直居中 */
+                }
+                #home .card {
+                    background: #ebe4dc;
+                    border-radius: 8px;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+
+                #home .herb-image {
+                    width: 100%; /* 设置图片宽度为容器宽度的100% */
+                    height: auto; /* 高度自动调整以保持比例 */
+                    object-fit: cover; /* 图片覆盖整个容器，但保持比例 */
+                    border-radius: 4px;
+                }
+                #home .card:hover {
+                    transform: translateY(-5px); /* 向上移动5px */
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 添加阴影效果 */
+                    transition: transform 0.3s, box-shadow 0.3s; /* 过渡效果的时间 */
+                }
+            </style>
+                  <h1>欢迎来到欢乐小药堂</h1>
+                <p class="caption">🌿 你将从这里开始你的小小郎中之旅。</p>
+                <img src="/static/images/herbs/xiao.png" alt="Welcome Image" class="herb-image" style="width:50%; height: auto;">
+            </div>
+            </style>
+                <h2>中医药</h2>
+                <p>中医，中华民族瑰宝。以阴阳五行等理论为基础，通过望闻问切诊断病情。采用中药、针灸、推拿等疗法，注重整体观念与辨证论治。历经千年传承，在治疗疾病、养生保健方面发挥着独特作用，为人类健康作出卓越贡献。</p>
+            </div>
+            
+        </section>
+
+        <!-- 学药材部分 -->
+        <section id="learn" class="page-section">
+            <style>
+                #learn .herbs-section {
+                    padding: 20px;
+                    background: #ebe4dc;
+                    border-radius: 8px;
+                    margin: 20px 0;
+                }
+
+                #learn .herb-card {
+                    border: 1px solid #ebe4dc;
+                    border-radius: 8px;
+                    padding: 15px;
+                    margin: 10px 0;
+                    background: #ebe4dc;
+                }
+
+                #learn .herb-image {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 4px;
+                    margin: 10px 0;
+                }
+
+                #learn .game-section {
+                    margin-top: 20px;
+                    padding: 20px;
+                    background: #ebe4dc;
+                    border-radius: 8px;
+                }
+
+                #learn .button {
+                    background-color: var(--primary-color);
+                    color: #ebe4dc;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    margin: 10px 0;
+                }
+
+                #learn .button:hover {
+                    background-color: var(--secondary-color);
+                }
+            </style>
+
+            <div class="herbs-section">
+                <h1>小郎中学药材: 熟悉药材</h1>
+                <p>熟悉药草是一个郎中的必修课，所以我们先见识一些常见的草药吧！😎</p>
+                
+                <div class="herb-selection">
+                    <h2>选择一种药材了解更多</h2>
+                    <select class="herb-select" id="herbSelect">
+                        <option value="">请选择药材...</option>
+                        <option value="人参">人参</option>
+                        <option value="黄芪">黄芪</option>
+                        <option value="当归">当归</option>
+                        <option value="党参">党参</option>
+                        <option value="半夏">半夏</option>
+                        <option value="鱼胆草">鱼胆草</option>
+                        <option value="路路通">路路通</option>
+                        <option value="胆木">胆木</option>
+                        <option value="山姜">山姜</option>
+                        <option value="藤黄">藤黄</option>
+                        <option value="肉豆蔻">肉豆蔻</option>
+                        <option value="山萸肉">山萸肉</option>
+                        <option value="萝藦">萝藦</option>
+                        <option value="乌桕子">乌桕子</option>
+                        <option value="一点红">一点红</option>
+                        <option value="醉鱼草">醉鱼草</option>
+                        <option value="铁苋">铁苋</option>
+                        <option value="八角莲">八角莲</option>
+                        <option value="海马">海马</option>
+                        <option value="九节菖蒲">九节菖蒲</option>
+                        <option value="防风草">防风草</option>
+                        <option value="豆蔻">豆蔻</option>
+                    </select>
+
+                    <div id="herbInfo" class="herb-card" style="display: none;">
+                        <h3 id="herbName"></h3>
+                        <img id="herbImage" src="" alt="" class="herb-image">
+                        <p id="herbDescription"></p>
+                    </div>
+                </div>
+
+                <div class="game-section">
+                    <h2>药材猜猜乐</h2>
+                    <p>这是一个通过图片猜测药材名称的小游戏。</p>
+                    <button id="startGame" class="button">开始游戏</button>
+
+                    <div id="gameArea" style="display: none;">
+                        <img id="questionImage" src="" alt="猜猜这是什么药材？" class="herb-image">
+                        <form class="guess-form">
+                            <input type="text" id="userGuess" class="input-field" placeholder="请输入你的猜测">
+                            <button type="submit" class="button">提交</button>
+                        </form>
+                        <p id="gameResult"></p>
+                        <button id="playAgain" class="button" style="display: none;">再玩一次</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--植物识别 -->
+        <section id="identify" class="page-section">
+            <h1>植物识别</h1>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="imageInput">请上传您想识别的图片（为保证识别效果，文件大小请保持在10MB以下；支持的文件格式：JPG, JPEG, PNG）:</label>
+                <input type="file" id="imageInput" name="image" accept=".jpg, .jpeg, .png ,.webp ,.bmp" required>
+                <button type="button" onclick="uploadImage()">上传图片</button>    
+                <footer class="page-footer">
+                <p>若想了解更多，请在左侧进行选择，进入小郎中拜大师页面</p>
+            </footer>
+            </form>
+             <!-- 页面底部信息 -->
+            
+            <div id="result">
+                <div id="plantImage"></div>
+                <div id="plantInfo">
+                    <p id="plantName">名称：加载中...</p>
+                    <p id="plantConfidence">置信度：加载中...</p>
+                    <p id="plantDescription">描述：加载中...</p>
+                </div>
+            </div>
+            <script>
+                function uploadImage() {
+                    const imageInput = document.getElementById('imageInput');
+                    const file = imageInput.files[0];
+                    if (file) {
+                        const formData = new FormData();
+                        formData.append('image', file);
+        
+                        fetch('/api/plant_identify', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.error) {
+                                alert(data.error);
+                            } else {
+                                document.getElementById('plantName').textContent = '名称：' + data.name;
+                                document.getElementById('plantConfidence').textContent = '置信度：' + data.confidence;
+                                document.getElementById('plantDescription').textContent = '描述：' + (data.description || '暂无描述信息。');
+                                
+                                // 清除之前可能存在的图片
+                                const plantImageDiv = document.getElementById('plantImage');
+                                plantImageDiv.innerHTML = ''; // 清除之前的内容
+                                plantImageDiv.innerHTML = `<img src="${URL.createObjectURL(file)}" alt="Plant Image" style="max-width: 100%; height: auto;" />`; // 添加新图片
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            alert('上传出错：' + error.message);
+                        });
+                    } else {
+                        alert('请先选择一张图片。');
+                    }
+                }
+                
+            </script>
+            
+        </section>
+        
+
+        <!-- 拜师部分 -->
+        <section id="master" class="page-section">
+            <style>
+                #master .master-section {
+                    padding: 20px;
+                    background:#ebe4dc ;
+                    border-radius: 8px;
+                    margin: 20px 0;
+                    max-width: 800px;
+                    margin: 0 auto;
+                }
+
+                #master .master-image {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    margin: 20px auto;
+                    display: block;
+                    object-fit: cover;
+                }
+
+                #master .chat-container {
+                    border: 1px solid #ebe4dc;
+                    border-radius: 8px;
+                    padding: 20px;
+                    margin: 20px 0;
+                    background: #ebe4dc;
+                }
+
+                #master .chat-input {
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 20px;
+                }
+
+                #master .message {
+                    margin: 10px 0;
+                    padding: 10px;
+                    border-radius: 8px;
+                    max-width: 80%;
+                }
+
+                #master .user-message {
+                    background-color: #ebe4dc;
+                    margin-left: auto;
+                }
+
+                #master .master-message {
+                    background-color: #ebe4dc;
+                    margin-right: auto;
+                }
+            </style>
+
+            <div class="master-section">
+                <h1>小郎中拜师: 与师交流</h1>
+                <p>在这里我们将从师于李时珍喔，大朋友小朋友如果有什么疑惑敬请询问喔，李老先生将会给予你满意的答复喔！</p>
+
+                <img src="/static/images/herbs/li_shizhen.png" alt="李时珍像" class="master-image">
+
+                <div class="chat-container">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message master-message">
+                            欢迎来到小郎中拜师环节，我是李时珍。有什么想问的，尽管说吧。
+                        </div>
+                    </div>
+
+                    <div class="loading" id="loading">
+                        <div class="loading-spinner"></div>
+                        <p>正在查找《本草纲目》中的相关内容...</p>
+                    </div>
+
+                    <div class="chat-input">
+                        <input type="text" id="userInput" placeholder="输入你想问的药材..." />
+                        <button onclick="sendMessage()">发送</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 练小手部分 -->
+        <section id="practice" class="page-section">
+            <style>
+                #practice .practice-section {
+                    padding: 20px;
+                    background: #ebe4dc;
+                    border-radius: 8px;
+                    margin: 20px 0;
+                    max-width: 800px;
+                    margin: 0 auto;
+                }
+
+                #practice .recipe-card {
+                    border: 1px solid #ebe4dc;
+                    border-radius: 8px;
+                    padding: 20px;
+                    margin: 20px 0;
+                    background: #ebe4dc;
+                    transition: transform 0.2s;
+                }
+
+                #practice .recipe-card:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                }
+
+                #practice .steps-list li::before {
+                    content: "👉";
+                    margin-right: 10px;
+                }
+
+                #practice .warning-list li::before {
+                    content: "⚠️";
+                    margin-right: 10px;
+                }
+            </style>
+
+            <div class="practice-section">
+                <h1>小郎中练小手: 药食同源</h1>
+                <p>在这里我们将学习一些之前学过药材，并将实现药食同源！给亲人们一个惊喜。</p>
+
+                <h2>药食同源简介</h2>
+                <p>药食同源是指一些食材既可以作为食物，又具有药用价值。这些食材在中医理论中被广泛应用。</p>
+
+                <div class="recipe-selection">
+                    <h3>选择一个菜谱查看详情</h3>
+                    <select id="recipeSelect" class="recipe-select">
+                        <option value="">请选择菜谱...</option>
+                        <option value="当归炖鸡">当归炖鸡</option>
+                        <option value="黄芪炖羊肉">黄芪炖羊肉</option>
+                        <option value="枸杞红枣茶">枸杞红枣茶</option>
+                        <option value="山药炒木耳">山药炒木耳</option>
+                    </select>
+
+                    <div id="recipeDetails" class="recipe-card" style="display: none;">
+                        <h3 id="recipeName"></h3>
+                        <img id="recipeImage" src="" alt="" class="recipe-image">
+                        <div class="recipe-details">
+                            <h4>功效</h4>
+                            <p id="recipeEffect"></p>
+                            <h4>制作步骤</h4>
+                            <ul id="recipeSteps" class="steps-list"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notice-box">
+                    <h3>注意事项</h3>
+                    <ul class="warning-list">
+                        <li>了解食材的性质和功效</li>
+                        <li>根据个人体质选择合适的食材</li>
+                        <li>孕妇和特殊人群应在医生指导下使用</li>
+                        <li>注意食材的新鲜度和卫生</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 页面切换逻辑
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                // 移除所有激活状态
+                document.querySelectorAll('.nav-links a').forEach(l => 
+                    l.classList.remove('active'));
+                document.querySelectorAll('.page-section').forEach(section => 
+                    section.classList.remove('active'));
+
+                // 添加新的激活状态
+                this.classList.add('active');
+                const pageId = this.getAttribute('data-page');
+                document.getElementById(pageId).classList.add('active');
+                
+                // 滚动到顶部
+                window.scrollTo(0, 0);
+            });
+        });
+
+        // 药材数据
+        const herbData = {
+            "人参": {
+                description: "人参，五加科植物，被誉为'百草之王'，具有大补元气、复脉固脱等功效。",
+                image: "/static/images/herbs/yc1.bmp"
+            },
+            "黄芪": {
+                description: "黄芪，豆科植物，有增强免疫力、利尿消肿等作用。",
+                image: "/static/images/herbs/黄芪.jpg"
+            },
+            "当归": {
+                description: "当归，伞形科植物，用于补血活血、调经止痛。",
+                image: "/static/images/herbs/当归.jpg"
+            },
+            "党参": {
+                description: "党参, 人参科植物，有补中益气、健脾益肺等功效。",
+                image: "/static/images/herbs/党参.jpg"
+            },
+            "半夏": {
+                description: "半夏, 天南星科植物，有燥湿化痰、降逆止呕等功效。",
+                image: "/static/images/herbs/半夏.jpg"
+            },
+            "鱼胆草": {
+                description: "鱼胆草, 龙胆科植物，有清热泻火、解毒利湿等功效。",
+                image: "/static/images/herbs/鱼胆草.jpg"
+            },
+            "路路通": {
+                description: "路路通, 金缕梅科植物，有祛风活络、利水通经等功效。",
+                image: "/static/images/herbs/路路通.jpg"
+            },
+            "胆木": {
+                description: "胆木, 茜草科植物，有清热解毒、消肿止痛等功效。",
+                image: "/static/images/herbs/胆木.jpg"
+            },
+            "山姜": {
+                description: "山姜, 姜科植物，有温中散寒、祛风活血等功效。",
+                image: "/static/images/herbs/山姜.jpg"
+            },
+            "藤黄": {
+                description: "藤黄, 藤黄科植物，有消肿排脓、散瘀解毒等功效。",
+                image: "/static/images/herbs/藤黄.jpg"
+            },
+            "肉豆蔻": {
+                description: "肉豆蔻, 肉豆蔻科植物，有温中行气、涩肠止泻等功效。",
+                image: "/static/images/herbs/肉豆蔻.jpg"
+            },
+            "山萸肉": {
+                description: "山萸肉, 山茱萸科植物，有补益肝肾、涩精固脱等功效。",
+                image: "/static/images/herbs/山萸肉.jpg"
+            },
+            "萝藦": {
+                description: "萝藦, 萝藦科植物，有补精益气、通乳解毒等功效。",
+                image: "/static/images/herbs/萝藦.jpg"
+            },
+            "乌桕子": {
+                description: "乌桕子, 大戟科植物，有杀虫、利水通便等功效。",
+                image: "/static/images/herbs/乌桕子.jpg"
+            },
+            "一点红": {
+                description: "一点红, 菊科植物，有清热解毒、消炎利尿等功效。",
+                image: "/static/images/herbs/一点红.jpg"
+            },
+            "醉鱼草": {
+                description: "醉鱼草, 马钱科植物，有止咳定喘、活血祛瘀等功效。",
+                image: "/static/images/herbs/醉鱼草.jpg"
+            },
+            "铁苋": {
+                description: "铁苋, 大戟科植物，有清热利湿、凉血解毒等功效。",
+                image: "/static/images/herbs/铁苋.jpg"
+            },
+            "八角莲": {
+                description: "八角莲, 小檗科植物，有化痰散结、祛瘀止痛等功效。",
+                image: "/static/images/herbs/八角莲.jpg"
+            },
+            "海马": {
+                description: "海马, 海龙科动物，有温肾壮阳、散结消肿等功效。",
+                image: "/static/images/herbs/海马.jpg"
+            },
+            "九节菖蒲": {
+                description: "九节菖蒲, 毛莨科植物，有开窍化痰、醒脾安神等功效。",
+                image: "/static/images/herbs/九节菖蒲.jpg"
+            },
+            "防风草": {
+                description: "防风草, 唇形科植物，有祛风除湿、解毒止痛等功效。",
+                image: "/static/images/herbs/防风草.jpg"
+            },
+            "豆蔻": {
+                description: "豆蔻, 姜科植物，有化湿消痞、行气温中等功效。",
+                image: "/static/images/herbs/豆蔻.jpg"
+            }
+        };
+            // 可以继续添加更多药材数据...
+        
+
+        // 药材选择处理
+        document.getElementById('herbSelect')?.addEventListener('change', function(e) {
+            const selectedHerb = e.target.value;
+            const herbInfo = document.getElementById('herbInfo');
+            
+            if (selectedHerb && herbData[selectedHerb]) {
+                const herb = herbData[selectedHerb];
+                document.getElementById('herbName').textContent = selectedHerb;
+                document.getElementById('herbImage').src = herb.image;
+                document.getElementById('herbDescription').textContent = herb.description;
+                herbInfo.style.display = 'block';
+            } else {
+                herbInfo.style.display = 'none';
+            }
+        });
+
+        // 猜猜乐游戏功能
+        let currentHerb = null;
+        
+        document.getElementById('startGame')?.addEventListener('click', function() {
+            startNewGame();
+        });
+
+        function startNewGame() {
+            const herbs = Object.keys(herbData);
+            currentHerb = herbs[Math.floor(Math.random() * herbs.length)];
+            document.getElementById('questionImage').src = herbData[currentHerb].image;
+            document.getElementById('gameArea').style.display = 'block';
+            document.getElementById('gameResult').textContent = '';
+            document.getElementById('playAgain').style.display = 'none';
+            document.getElementById('userGuess').value = '';
+        }
+
+        document.querySelector('.guess-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const guess = document.getElementById('userGuess').value.trim();
+            if (guess === currentHerb) {
+                document.getElementById('gameResult').textContent = '恭喜你，答对了！';
+            } else {
+                document.getElementById('gameResult').textContent = `很遗憾，答错了。正确答案是：${currentHerb}`;
+            }
+            document.getElementById('playAgain').style.display = 'block';
+        });
+
+        document.getElementById('playAgain')?.addEventListener('click', startNewGame);
+
+        // 拜师部分的聊天功能
+        // API调用相关的JavaScript代码
+        const BACKEND_URL = 'http://localhost:5000/api/chat';
+
+        async function callBackendAPI(message) {
+            try {
+                const response = await fetch(BACKEND_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                return data.choices[0].message.content;
+            } catch (error) {
+                console.error('Error calling backend:', error);
+                // 如果API调用失败，使用备选响应
+                return herbResponses[message] || 
+                    `抱歉，我暂时无法访问完整的药材信息。不过我知道${message}是一味重要的中药材...`;
+            }
+        }
+
+        // 发送消息函数
+        // 新代码
+        async function sendMessage() {
+                const input = document.getElementById('userInput');
+                const message = input.value.trim();
+                const loading = document.getElementById('loading');
+                
+                // 重置loading的显示状态
+                loading.style.display = 'none';
+                
+                if (message) {
+                    // 添加用户消息
+                    addMessage(message, 'user');
+                    input.value = '';
+
+                    // 显示加载动画
+                    loading.style.display = 'flex';
+
+                    try {
+                        // 发送请求到后端
+                        const response = await fetch('http://localhost:5000/api/chat', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ message })
+                        });
+
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+
+                        // 创建一个新的消息div用于累积响应内容
+                        const messageDiv = document.createElement('div');
+                        messageDiv.className = 'message assistant-message';
+                        document.getElementById('chatMessages').appendChild(messageDiv);
+
+                        // 设置响应流读取
+                        const reader = response.body.getReader();
+                        const decoder = new TextDecoder();
+                        let fullText = '';
+
+                        while (true) {
+                            const { value, done } = await reader.read();
+                            if (done) {
+                                // 完成时隐藏加载动画
+                                loading.style.display = 'none';
+                                break;
+                            }
+
+                            const chunk = decoder.decode(value);
+                            const lines = chunk.split('\n');
+                            
+                            for (const line of lines) {
+                                if (line.startsWith('data: ')) {
+                                    try {
+                                        const data = JSON.parse(line.slice(6));
+                                        if (data.error) {
+                                            console.error('Error:', data.error);
+                                            messageDiv.textContent = '抱歉，处理您的请求时出现错误。';
+                                            loading.style.display = 'none';
+                                        } else if (data.content) {
+                                            if (data.replace) {
+                                                fullText = data.content;
+                                            } else {
+                                                fullText += data.content;
+                                            }
+                                            messageDiv.innerHTML = fullText.split('\n').map(line => 
+                                                line.trim() ? `<p>${line}</p>` : '<br>'
+                                            ).join('');
+                                            messageDiv.scrollIntoView({ behavior: 'smooth' });
+                                            loading.style.display = 'none';
+                                        }
+                                    } catch (e) {
+                                        console.error('Parse error:', e);
+                                        loading.style.display = 'none';
+                                    }
+                                }
+                            }
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        loading.style.display = 'none';
+                        addMessage('抱歉，我现在无法回答您的问题。请稍后再试。', 'assistant');
+                    }
+                }
+            else {
+                // 隐藏加载动画
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+        // 更新chat-input监听器
+        document.getElementById('userInput')?.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function addMessage(text, type) {
+            const messagesDiv = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}-message`;
+            messageDiv.textContent = text;
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+        
+        // Handle Enter key in chat input
+        document.getElementById('userInput')?.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // 药食同源部分的菜谱功能
+        const recipeData = {
+            "当归炖鸡": {
+                effect: "当归炖鸡具有补血调经的功效。",
+                image: "/static/images/herbs/ys1.png",
+                steps: [
+                    "将当归洗净备用",
+                    "鸡切块，焯水去血沫",
+                    "将当归和鸡块一同炖煮2小时"
+                ]
+            },
+            "黄芪炖羊肉": {
+                effect: "黄芪炖羊肉具有温阳补气的功效。",
+                image: "/static/images/herbs/ys2.png",
+                steps: [
+                    "将黄芪洗净备用",
+                    "羊肉切块，焯水去血沫",
+                    "将黄芪和羊肉块一同炖煮2小时"
+                ]
+            },
+            "枸杞红枣茶": {
+                effect: "枸杞红枣茶具有滋补肝肾、益精明目的功效。",
+                image: "/static/images/herbs/ys3.png",
+                steps: [
+                    "将枸杞和红枣洗净",
+                    "加入适量水煮沸后小火煮10分钟",
+                    "可加入适量冰糖调味"
+                ]
+            },
+            "山药炒木耳": {
+                effect: "山药炒木耳具有健脾益肺、补肾涩精的功效。",
+                image: "/static/images/herbs/ys4.png",
+                steps: [
+                    "山药切片，木耳泡发",
+                    "将山药和木耳一同炒至熟透",
+                    "加入适量盐和调味料"
+                ]
+            }
+        };
+
+        document.getElementById('recipeSelect')?.addEventListener('change', function(e) {
+            const selectedRecipe = e.target.value;
+            const recipeDetails = document.getElementById('recipeDetails');
+            
+            if (selectedRecipe && recipeData[selectedRecipe]) {
+                const recipe = recipeData[selectedRecipe];
+                document.getElementById('recipeName').textContent = selectedRecipe;
+                document.getElementById('recipeImage').src = recipe.image
+                document.getElementById('recipeEffect').textContent = recipe.effect;
+                document.getElementById('recipeImage').style.width = '60%';
+                document.getElementById('recipeImage').style.height = 'auto';
+                const stepsList = document.getElementById('recipeSteps');
+                stepsList.innerHTML = '';
+                recipe.steps.forEach(step => {
+                    const li = document.createElement('li');
+                    li.textContent = step;
+                    stepsList.appendChild(li);
+                });
+                
+                recipeDetails.style.display = 'block';
+            } else {
+                recipeDetails.style.display = 'none';
+            }
+        }
+    
+    );
+    </script>
+</body>
+</html>
